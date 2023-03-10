@@ -30,23 +30,23 @@ for (let i = 1; i <= 100; i++) {
     ulElement.append(liElement);
 
     //aggiungo classi e style per css
-    liElement.classList.add('d-flex', 'justify-content-center', 'align-items-center')
-    liElement.style.width = 'calc(100% / 7)';
-    liElement.style.aspectRatio = '1 / 1'
+    liElement.classList.add('p-2')
+    liElement.style.width = '10%';
+    liElement.style.aspectRatio = '1 / 1';
 
     //dichiaro un if statement per definire cosa loggare nella console nel caso:
     if (i % 3 === 0 && i % 5 === 0) {
         // il numero sia un multiplo sia di 3 che di 5
-        liElement.append('FizzBuzz');
+        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">FizzBuzz</div>`;
     } else if ( i % 3 === 0) {
         //il numero sia un numero solo di 3
-        liElement.append('Fizz');
+        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">Fizz</div>`;
     } else if (i % 5 === 0) {
         // il numero sia un multiplo solo di 5
-        liElement.append('Buzz');
+        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">Buzz</div>`;
     } else {
         // il numero non rispecchia nessuno dei casi precedenti
-        liElement.append(i);
+        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">${i}</div>`;
     }
 
 }
