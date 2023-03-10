@@ -30,24 +30,31 @@ for (let i = 1; i <= 100; i++) {
     ulElement.append(liElement);
 
     //aggiungo classi e style per css
-    liElement.classList.add('p-2')
-    liElement.style.width = '10%';
-    liElement.style.aspectRatio = '1 / 1';
+    liElement.classList.add('p-2', 'text-white')
+/*     liElement.style.width = '10%';
+    liElement.style.aspectRatio = '1 / 1'; */
+
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('card');
+
+    cardElement.innerHTML = `${i}`;
 
     //dichiaro un if statement per definire cosa loggare nella console nel caso:
     if (i % 3 === 0 && i % 5 === 0) {
         // il numero sia un multiplo sia di 3 che di 5
-        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">FizzBuzz</div>`;
+        cardElement.innerHTML = 'FizzBuzz';
+        cardElement.style.backgroundColor = 'var(--bs-indigo)';
     } else if ( i % 3 === 0) {
         //il numero sia un numero solo di 3
-        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">Fizz</div>`;
+        cardElement.innerHTML = 'Fizz';
+        cardElement.style.backgroundColor = 'var(--bs-orange';
     } else if (i % 5 === 0) {
         // il numero sia un multiplo solo di 5
-        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">Buzz</div>`;
-    } else {
-        // il numero non rispecchia nessuno dei casi precedenti
-        liElement.innerHTML = `<div class="card w-100 h-100 d-flex align-items-center justify-content-center">${i}</div>`;
-    }
+        cardElement.innerHTML = 'Buzz';
+        cardElement.style.backgroundColor = 'var(--bs-teal)';
+    } 
+
+    liElement.append(cardElement);
 
 }
 
