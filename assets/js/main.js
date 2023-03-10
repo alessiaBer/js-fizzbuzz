@@ -31,7 +31,12 @@ Potete usare vari strumenti per farlo:
 -`.insertAdjacentHTML()` */
 
 //richiamo il container nel DOM e lo assegno ad una variabile
-
-//aggiungo al container un elemento ul e lo assegno ad una variabile
-
+const container = document.querySelector('.container');
+// creo un ul element e lo assegno ad una variabile
+const ulElement = document.createElement('ul');
+//aggiungo al container la variabile dell'elemento ul 
+container.append(ulElement);
+//creo un li element e lo assegno ad una variabile
+const liElement = document.createElement('li');
 //aggiungo all'elemento ul un elemento li per ogni numero creato nel for loop
+ulElement.append(liElement);
