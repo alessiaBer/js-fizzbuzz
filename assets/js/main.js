@@ -42,7 +42,7 @@ for (let i = 1; i <= 100; i++) {
     //dichiaro un if statement per definire cosa loggare nella console nel caso:
     if (i % 3 === 0 && i % 5 === 0) {
         // il numero sia un multiplo sia di 3 che di 5
-        cardElement.innerHTML = 'FizzBuzz';
+        cardElement.innerHTML = 'Fizz Buzz';
         cardElement.style.backgroundColor = 'var(--bs-indigo)';
     } else if ( i % 3 === 0) {
         //il numero sia un numero solo di 3
