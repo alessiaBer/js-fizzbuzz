@@ -17,6 +17,9 @@ const ulElement = document.createElement('ul');
 //aggiungo al container la variabile dell'elemento ul 
 container.append(ulElement);
 
+//aggiungo classi per css
+ulElement.classList.add('list-unstyled', 'd-flex', 'flex-wrap');
+
 
 //creo un for loop che stampi nella console i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
@@ -25,6 +28,11 @@ for (let i = 1; i <= 100; i++) {
     const liElement = document.createElement('li');
     //aggiungo all'elemento ul un elemento li per ogni numero creato nel for loop
     ulElement.append(liElement);
+
+    //aggiungo classi e style per css
+    liElement.classList.add('d-flex', 'justify-content-center', 'align-items-center')
+    liElement.style.width = 'calc(100% / 7)';
+    liElement.style.aspectRatio = '1 / 1'
 
     //dichiaro un if statement per definire cosa loggare nella console nel caso:
     if (i % 3 === 0 && i % 5 === 0) {
