@@ -22,3 +22,16 @@ for (let i = 1; i <= 100; i++) {
     }
 
 }
+
+/* Crea un container nel DOM , 
+aggiungendo un elemento html con il numero o la stringa corretta da mostrare.
+Potete usare vari strumenti per farlo:
+-`append()` oppure
+-`.innerHTML`
+-`.insertAdjacentHTML()` */
+
+//richiamo il container nel DOM e lo assegno ad una variabile
+
+//aggiungo al container un elemento ul e lo assegno ad una variabile
+
+//aggiungo all'elemento ul un elemento li per ogni numero creato nel for loop
